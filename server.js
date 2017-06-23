@@ -5,7 +5,7 @@
 const app = require('express')()
 	, server = require('http').Server(app)
 	, io = require('socket.io')(server)
-	, rtsp = require('rtsp-ffmpeg')
+	, rtsp = require('./rtsp-ffmpeg')
 	;
 var port = process.env.PORT || 1337;
 // use rtsp = require('rtsp-ffmpeg') instead if you have install the package
