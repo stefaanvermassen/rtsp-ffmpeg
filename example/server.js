@@ -7,9 +7,10 @@ const app = require('express')()
 	, io = require('socket.io')(server)
 	, rtsp = require('../lib/rtsp-ffmpeg')
 	;
+var port = process.env.PORT || 1337;
 // use rtsp = require('rtsp-ffmpeg') instead if you have install the package
-server.listen(6147, function(){
-	console.log('Listening on localhost:6147');
+server.listen(port, function(){
+	console.log('Listening on port ' + port);
 });
 
 
